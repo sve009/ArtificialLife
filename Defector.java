@@ -1,29 +1,37 @@
 
 
-
+/**
+ * A subclass of Organism that never
+ * cooperates.
+ * Methods are modified to suit.
+ */
 public class Defector extends Organism {
-        
-        public Defector() {
-                super();
-        }
 
-        @Override
-        public String getType() {
-                return "Defector";
-        }
+  //Constructor-------------------------------
 
-        @Override
-        public Organism reproduce() {
-                return new Defector();
-        }
+  public Defector() {
+    super();
+  }
 
-        @Override
-        public double getCooperationProbability() {
-                return 0;
-        }
+  //Methods-----------------------------------
 
-        @Override
-        public boolean cooperates() {
-                return false;
-        }
+  @Override
+  public String getType() {
+    return "Defector";
+  }
+
+  @Override
+  public Organism reproduce() {
+    return new Defector();
+  }
+
+  @Override
+  public double getCooperationProbability() {
+    return 0;
+  }
+
+  @Override
+  public boolean cooperates() {
+    return false;
+  }
 }
