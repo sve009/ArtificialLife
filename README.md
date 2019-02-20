@@ -5,4 +5,5 @@ A simple program designed to simulate simple artificial life through monitoring 
 Sam Rowekamp and Sam Eagen
 
 # Sources
-None
+https://stackoverflow.com/questions/4040001/creating-random-numbers-with-no-duplicates. 
+
