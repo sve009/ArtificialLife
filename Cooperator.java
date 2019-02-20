@@ -1,3 +1,4 @@
+import java.util.Random;
 
 /**
  * A subclass of organism that always 
@@ -5,11 +6,15 @@
  * Methods are modified to suit.
  */
 public class Cooperator extends Organism {
+  //fields---------------------------------
+
+  private Random rand;
 
   //Constructor-----------------------------
 
   public Cooperator() {
     super();
+    this.rand = new Random();
   }
 
   //Methods---------------------------------
@@ -21,6 +26,10 @@ public class Cooperator extends Organism {
 
   @Override
   public Organism reproduce() {
+    //Can mutate to PartialCooperator
+    if (rand.nextInt(1000) == 0) {
+      return new PartialCooperator();
+    }
     return new Cooperator();
   }
 

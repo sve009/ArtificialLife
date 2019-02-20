@@ -27,6 +27,13 @@ public class PartialCooperator extends Organism {
 
   @Override
   public Organism reproduce() {
+    //Check to see whether mutation to Cooperator or Defector occurs
+    int mut = rand.nextInt(1000);
+    if (mut == 0) {
+      return new Cooperator();
+    } else if (mut == 999) {
+      return new Defector();
+    } 
     return new PartialCooperator();
   }
 
