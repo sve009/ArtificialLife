@@ -33,6 +33,9 @@ public class Organism {
 
   public void decrementEnergy() {
     this.energy--;
+    if (this.energy < 0) {
+            this.energy = 0;
+    }
   }
 
   public String getType() {
