@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 public class Population {
   ArrayList<Organism> pop;
@@ -31,13 +32,9 @@ public class Population {
       if (thisOrg.cooperates()) {
         thisOrg.decrementEnergy();
         Random randomGenerator = new Random();
-        int randomInt;
+        Collections.shuffle(pop);
         for (int j = 0; j < 8; j++) {
-          randomInt = randomGenerator.nextInt(this.pop.size());
-          while (randomInt == i) {
-            randomInt = randomGenerator.nextInt(this.pop.size());
-          } // while
-          this.pop.get(randomInt).incrementEnergy();
+          this.pop.get(j).incrementEnergy();
         } // for
       } // if
       if (thisOrg.getEnergy() >= 10) {
