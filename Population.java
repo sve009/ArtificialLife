@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Population {
   ArrayList<Organism> pop;
@@ -28,11 +29,20 @@ public class Population {
       thisOrg.update();
       if (thisOrg.cooperates()) {
         thisOrg.decrementEnergy();
-        // TODO, give 8 other random Organisms one energy
+        Random randomGenerator = new Random();
+        int randomInt;
+        for (int j = 0; j < 8; j++) {
+          randomInt = randomGenerator.nextInt(this.pop.size());
+          while (randomInt == i) {
+            randomInt = randomGenerator.nextInt(this.pop.size());
+          } // while
+          this.pop.get(randomInt).update();
+        } // for
       } // if
       if (thisOrg.getEnergy() >= 10) {
-        thisOrg.reproduce();
-        // TODO, this conditional needs to replace a random organism in pop with the returned one
+        Random randomGenerator = new Random();
+        int randomInt = randomGenerator.nextInt(this.pop.size());
+        this.pop.set(randomInt, thisOrg.reproduce());
       } // if
     } // for
   } // method update()
