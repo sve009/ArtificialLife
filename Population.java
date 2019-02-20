@@ -5,6 +5,7 @@ public class Population {
   ArrayList<Organism> pop;
 
   public Population(Pair<String, Integer>[] counts) throws IllegalArgumentException {
+    pop = new ArrayList<Organism>();
     for (int i = 0; i < counts.length; i++) {
       for (int j = 0; j < counts[i].getRight(); j++) {
         if (counts[i].getLeft().equals("Cooperator")) {
@@ -36,7 +37,7 @@ public class Population {
           while (randomInt == i) {
             randomInt = randomGenerator.nextInt(this.pop.size());
           } // while
-          this.pop.get(randomInt).update();
+          this.pop.get(randomInt).incrementEnergy();
         } // for
       } // if
       if (thisOrg.getEnergy() >= 10) {
