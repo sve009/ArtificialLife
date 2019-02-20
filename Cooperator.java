@@ -27,7 +27,7 @@ public class Cooperator extends Organism {
   @Override
   public Organism reproduce() {
     //Can mutate to PartialCooperator
-    if (rand.nextInt(1000) == 0) {
+    if (rand.nextInt(100) == 0) {
       return new PartialCooperator();
     }
     return new Cooperator();
