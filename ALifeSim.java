@@ -10,7 +10,7 @@ public class ALifeSim {
   //main----------------------------------------
 
   public static void main(String[] args) throws Exception {
-    PrintWriter pen = new PrintWriter("./testing/pop10coop9.txt");
+    PrintWriter pen = new PrintWriter("testing/pop100coop33.txt");
 
     if (args.length != 4) {
       throw new Error("Invalid number of arguments");
@@ -44,5 +44,6 @@ public class ALifeSim {
       pen.println("\nMean Cooperation Probability = " + pop.calculateCooperationMean());
     }
 
+    pen.close();
   }
 }
