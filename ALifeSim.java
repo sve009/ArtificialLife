@@ -9,8 +9,8 @@ public class ALifeSim {
 
   //main----------------------------------------
 
-  public static void main(String[] args) {
-    PrintWriter pen = new PrintWriter(System.out, true);
+  public static void main(String[] args) throws Exception {
+    PrintWriter pen = new PrintWriter("./testing/pop10coop9.txt");
 
     if (args.length != 4) {
       throw new Error("Invalid number of arguments");
@@ -30,16 +30,19 @@ public class ALifeSim {
 
     Population pop = new Population(startingNumbers);
 
-    for (int i = 0; i < iterations; i++) {
-      pop.update();
+    for (int j = 0; j < 10; j++) { 
+      for (int i = 0; i < iterations; i++) {
+        pop.update();
+      }
+
+      Pair<String, Integer>[] finalNumbers = pop.getPopulationCounts();
+
+      pen.println("After " + iterations + " ticks:");
+      pen.println("Cooperators = " + finalNumbers[0].getRight());
+      pen.println("Defectors = " + finalNumbers[1].getRight());
+      pen.println("Partial Cooperators = " + finalNumbers[2].getRight());
+      pen.println("\nMean Cooperation Probability = " + pop.calculateCooperationMean());
     }
 
-    Pair<String, Integer>[] finalNumbers = pop.getPopulationCounts();
-
-    pen.println("After " + iterations + " ticks:");
-    pen.println("Cooperators = " + finalNumbers[0].getRight());
-    pen.println("Defectors = " + finalNumbers[1].getRight());
-    pen.println("Partial Cooperators = " + finalNumbers[2].getRight());
-    pen.println("\nMean Cooperation Probability = " + pop.calculateCooperationMean());
   }
 }

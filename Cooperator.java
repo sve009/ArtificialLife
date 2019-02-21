@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * A subclass of organism that always 
@@ -14,7 +15,7 @@ public class Cooperator extends Organism {
 
   public Cooperator() {
     super();
-    this.rand = new Random();
+    this.rand = new SecureRandom();
   }
 
   //Methods---------------------------------
