@@ -29,18 +29,30 @@ public class Population {
     for (int i = 0; i < this.pop.size(); i++) {
       Organism thisOrg = this.pop.get(i);
       thisOrg.update();
+      // Bonus
       if (thisOrg.cooperates()) {
         thisOrg.decrementEnergy();
-        Random randomGenerator = new Random();
         Collections.shuffle(pop);
         for (int j = 0; j < 8; j++) {
           this.pop.get(j).incrementEnergy();
         } // for
       } // if
+      // Bonus
       if (thisOrg.getEnergy() >= 10) {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(this.pop.size());
-        this.pop.set(randomInt, thisOrg.reproduce());
+        int lowestEnergy = this.pop.get(0).getEnergy();
+        int lowestOrgIndex = 0;
+        int thisEnergy;
+        for (int k = 0; k < this.pop.size(); k++) {
+          thisEnergy = this.pop.get(k).getEnergy();
+          if (thisEnergy < lowestEnergy) {
+            lowestOrgIndex = k;
+            lowestEnergy = thisEnergy;
+          }
+        }
+        this.pop.set(lowestOrgIndex, thisOrg);
+        // Random randomGenerator = new Random();
+        // int randomInt = randomGenerator.nextInt(this.pop.size());
+        // this.pop.set(randomInt, thisOrg.reproduce());
       } // if
     } // for
   } // method update()
