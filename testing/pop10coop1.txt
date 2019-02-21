@@ -1,0 +1,60 @@
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
+After 100 ticks:
+Cooperators = 0
+Defectors = 10
+Partial Cooperators = 0
+
+Mean Cooperation Probability = 0.0
