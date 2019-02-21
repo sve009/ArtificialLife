@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * A subclass of organism that cooperates
@@ -15,7 +16,7 @@ public class PartialCooperator extends Organism {
 
   public PartialCooperator() {
     super();
-    rand = new Random();
+    rand = new SecureRandom();
   }
 
   //Methods-------------------------------------------

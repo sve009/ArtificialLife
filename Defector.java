@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * A subclass of Organism that never
@@ -14,7 +15,7 @@ public class Defector extends Organism {
 
   public Defector() {
     super();
-    this.rand = new Random();
+    this.rand = new SecureRandom();
   }
 
   //Methods-----------------------------------
